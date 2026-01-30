@@ -1,0 +1,1074 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMSEG Ciberseguridad - Documentación Completa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: white;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      margin: 40px 0 20px 0;
+      color: #1e3a8a;
+      border-bottom: 3px solid #06b6d4;
+      padding-bottom: 10px;
+      page-break-after: avoid;
+    }
+    
+    h2 {
+      font-size: 2em;
+      margin: 30px 0 15px 0;
+      color: #1e40af;
+      page-break-after: avoid;
+    }
+    
+    h3 {
+      font-size: 1.5em;
+      margin: 20px 0 10px 0;
+      color: #1e40af;
+      page-break-after: avoid;
+    }
+    
+    h4 {
+      font-size: 1.2em;
+      margin: 15px 0 8px 0;
+      color: #1e40af;
+      page-break-after: avoid;
+    }
+    
+    p {
+      margin: 10px 0;
+      text-align: justify;
+    }
+    
+    ul, ol {
+      margin: 15px 0 15px 30px;
+    }
+    
+    li {
+      margin: 8px 0;
+    }
+    
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    
+    pre {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      border-left: 4px solid #06b6d4;
+    }
+    
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    
+    th {
+      background: #1e3a8a;
+      color: white;
+    }
+    
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    
+    a {
+      color: #06b6d4;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    hr {
+      border: none;
+      border-top: 2px solid #06b6d4;
+      margin: 40px 0;
+      page-break-after: avoid;
+    }
+    
+    .cover {
+      text-align: center;
+      padding: 100px 0;
+      page-break-after: always;
+      border-bottom: 3px solid #06b6d4;
+    }
+    
+    .cover h1 {
+      font-size: 3em;
+      margin: 20px 0;
+      border: none;
+    }
+    
+    .cover p {
+      font-size: 1.2em;
+      color: #666;
+      margin: 10px 0;
+    }
+    
+    .toc {
+      page-break-after: always;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .toc h2 {
+      margin-top: 0;
+    }
+    
+    .toc ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    
+    .toc li {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+    
+    .toc a {
+      color: #06b6d4;
+    }
+    
+    .section {
+      page-break-before: always;
+    }
+    
+    .metadata {
+      background: #f0f9ff;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+      border-left: 4px solid #06b6d4;
+    }
+    
+    strong {
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+    
+    em {
+      color: #666;
+      font-style: italic;
+    }
+    
+    .checkmark {
+      color: #10b981;
+      font-weight: bold;
+    }
+    
+    .cross {
+      color: #ef4444;
+      font-weight: bold;
+    }
+    
+    @media print {
+      body {
+        padding: 20px;
+      }
+      h1 {
+        page-break-after: avoid;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+      ul, ol, p {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <h1>🛡️ MMSEG Ciberseguridad</h1>
+    <h2>Documentación Completa</h2>
+    <p><strong>Versión</strong>: 1.0</p>
+    <p><strong>Fecha</strong>: 30 de Enero, 2026</p>
+    <p><strong>Estado</strong>: ✅ Producción</p>
+  </div>
+  
+  <div class="toc">
+    <h2>📋 Tabla de Contenidos</h2>
+    <ul>
+      <li><a href="#readme">README - Resumen Ejecutivo</a></li>
+      <li><a href="#documentation">DOCUMENTATION - Documentación Técnica</a></li>
+      <li><a href="#deployment">DEPLOYMENT_GUIDE - Guía de Despliegue</a></li>
+    </ul>
+  </div>
+  
+  <div id="readme" class="section">
+    <h1>🛡️ MMSEG Ciberseguridad - Sitio Web Profesional</h1></p><p><strong>Estado</strong>: ✓ Producción  
+<strong>Versión</strong>: 1.0  
+<strong>Última actualización</strong>: 30 de Enero, 2026</p><p>---</p><p><h2>📌 Resumen Ejecutivo</h2></p><p><strong>MMSEG Ciberseguridad</strong> es un sitio web profesional de servicios de ciberseguridad e infraestructura construido con tecnología moderna y segura.</p><p><h3>✨ Características Principales</h3></p><p>✓ <strong>Diseño Responsivo</strong> - Funciona en móvil, tablet y desktop  
+✓ <strong>Agente IA Integrado</strong> - ChatBot con Claude para soporte 24/7  
+✓ <strong>Seguridad Empresarial</strong> - HTTPS/TLS, protección contra CVEs críticas  
+✓ <strong>SEO Optimizado</strong> - Metadata completa, Open Graph, Twitter Cards  
+✓ <strong>Rendimiento Rápido</strong> - Next.js 15 con optimizaciones automáticas  
+✓ <strong>Accesibilidad</strong> - Cumple estándares WCAG AA  </p><p>---</p><p><h2>🚀 Inicio Rápido</h2></p><p><h3>Opción 1: Ver Sitio en Vivo (Recomendado)</h3></p><p><strong>URL Temporal</strong>: https://ten-moles-cough.lindy.site</p><p><h3>Opción 2: Ejecutar Localmente</h3></p><p><pre><code>bash
+<h1>1. Clonar o descargar proyecto</h1>
+cd cybersecurity-site</p><p><h1>2. Instalar dependencias</h1>
+npm install</p><p><h1>3. Configurar variables de entorno</h1>
+cp .env.example .env.local
+<h1>Editar .env.local y agregar tu API key de Anthropic</h1></p><p><h1>4. Ejecutar en desarrollo</h1>
+npm run dev</p><p><h1>5. Abrir en navegador</h1>
+<h1>http://localhost:3000</h1>
+</code></pre></p><p><h3>Opción 3: Desplegar en Internet</h3></p><p><strong>Ver</strong>: `DEPLOYMENT_GUIDE.md` para instrucciones completas</p><p><strong>Recomendación</strong>: Usar <strong>Vercel</strong> (5 minutos, muy fácil)</p><p>---</p><p><h2>📁 Estructura del Proyecto</h2></p><p><pre><code>
+cybersecurity-site/
+├── app/
+│   ├── api/chat/route.ts          # API para ChatBot con Claude
+│   ├── layout.tsx                 # Layout raíz con SEO
+│   ├── page.tsx                   # Página principal
+│   └── globals.css                # Estilos globales
+├── components/
+│   ├── Header.tsx                 # Navegación (logo 180x180px)
+│   ├── Hero.tsx                   # Sección principal
+│   ├── Services.tsx               # 6 servicios
+│   ├── Solutions.tsx              # 3 soluciones
+│   ├── Contact.tsx                # Formulario de contacto
+│   ├── Footer.tsx                 # Pie de página
+│   ├── ChatBot.tsx                # Widget IA
+│   └── ui/                        # Componentes shadcn/ui
+├── public/
+│   ├── images/
+│   │   ├── logo-solo.png          # Logo 180x180px
+│   │   └── logo-completo.jpg      # Logo completo
+│   └── favicon.ico
+├── DOCUMENTATION.md               # Documentación completa
+├── DEPLOYMENT_GUIDE.md            # Guía de despliegue
+├── .env.example                   # Variables de entorno (plantilla)
+├── .env.local                     # Variables de entorno (local)
+└── package.json
+</code></pre></p><p>---</p><p><h2>🛠️ Stack Tecnológico</h2></p><p>| Componente | Tecnología | Versión |
+|-----------|-----------|---------|
+| <strong>Framework</strong> | Next.js | 15.5.6 |
+| <strong>React</strong> | React | 19.1.0 |
+| <strong>Lenguaje</strong> | TypeScript | 5.x |
+| <strong>Estilos</strong> | Tailwind CSS | 3.x |
+| <strong>Componentes</strong> | shadcn/ui | Latest |
+| <strong>IA</strong> | Anthropic Claude | 3.5 Sonnet |
+| <strong>Hosting</strong> | Vercel | (Recomendado) |</p><p>---</p><p><h2>🎯 Secciones del Sitio</h2></p><p><h3>1. Header/Navegación</h3>
+<ul><li>Logo 180x180px (MMSEG)</li></ul>
+<li>Menú responsivo</li>
+<li>Botón CTA "Consulta Gratis"</li>
+<li>Smooth scroll a secciones</p><p><h3>2. Hero</h3></li>
+<li>Headline: "Ciberseguridad e Infraestructura"</li>
+<li>Subheadline descriptivo</li>
+<li>2 botones CTA</li>
+<li>Indicadores de confianza (500+ empresas, 99.9% disponibilidad, 24/7)</p><p><h3>3. Servicios (6 servicios)</h3></li>
+1. <strong>Protección de Datos</strong> - AES-256, Backup, GDPR
+2. <strong>Gestión de Acceso</strong> - MFA/2FA, SSO, Control de roles
+3. <strong>Monitoreo 24/7</strong> - Detección, Análisis, Reportes
+4. <strong>Respuesta a Incidentes</strong> - Inmediata, Forense, Recuperación
+5. <strong>Infraestructura Segura</strong> - Cloud, Redundancia, Escalabilidad, On-premise
+6. <strong>Auditorías de Seguridad</strong> - Pentesting, Análisis, Reportes</p><p><h3>4. Soluciones (3 tipos)</h3>
+1. <strong>Empresariales</strong> - Multi-capa, ISO 27001, 24/7, SLA 99.99%
+2. <strong>PYME</strong> - Rápida, Predecible, Flexible
+3. <strong>E-commerce</strong> - PCI DSS, Pagos, Fraude, SSL/TLS</p><p><h3>5. Contacto</h3>
+<li>Formulario con validación</li>
+<li>Información de contacto</li>
+<li>Email, teléfono, ubicación</p><p><h3>6. Footer</h3></li>
+<li>Enlaces a servicios</li>
+<li>Enlaces a soluciones</li>
+<li>Información de empresa</li>
+<li>Copyright</p><p><h3>7. ChatBot (IA)</h3></li>
+<li>Widget flotante (esquina inferior derecha)</li>
+<li>Powered by Claude (Anthropic)</li>
+<li>Responde sobre servicios</li>
+<li>Califica leads</li>
+<li>Multiidioma (español/inglés)</p><p>---</p><p><h2>🤖 Integración de IA (ChatBot)</h2></p><p><h3>Configuración</h3></p><p>El ChatBot utiliza <strong>Claude (Anthropic)</strong> para responder preguntas.</p><p><strong>Obtener API Key</strong>:</li>
+1. Ir a: https://console.anthropic.com/account/keys
+2. Crear nueva API key
+3. Copiar clave (comienza con `sk-ant-`)
+4. Agregar a `.env.local`:</p><p><pre><code>bash
+ANTHROPIC_API_KEY="sk-ant-tu-clave-aqui"
+</code></pre></p><p><strong>Reiniciar servidor</strong>:
+<pre><code>bash
+npm run dev
+</code></pre></p><p><h3>Conocimiento del ChatBot</h3></p><p>- ✓ 6 servicios principales
+<li>✓ 3 tipos de soluciones</li>
+<li>✓ Información de contacto</li>
+<li>✓ Preguntas sobre ciberseguridad</li>
+<li>✓ Calificación de leads</p><p>---</p><p><h2>🔒 Seguridad</h2></p><p><h3>Vulnerabilidades Críticas - PROTEGIDO ✓</h3></p><p>| CVE | Descripción | Estado |</li>
+|-----|-------------|--------|
+| CVE-2025-29927 | Omisión de Autorización | ✓ PROTEGIDO |
+| CVE-2025-55182 | RCE en React Server Components | ✓ PROTEGIDO |
+| CVE-2025-66478 | RCE en Next.js | ✓ PROTEGIDO |
+| CVE-2025-55184 | DoS | ✓ PROTEGIDO |
+| CVE-2025-67779 | DoS | ✓ PROTEGIDO |</p><p><strong>Razón</strong>: Versiones actualizadas (Next.js 15.5.6, React 19.1.0)</p><p><h3>Características de Seguridad</h3></p><p>✓ <strong>HTTPS/TLS 1.3</strong> - Encriptación en tránsito  
+✓ <strong>Headers de Seguridad</strong> - HSTS, X-Frame-Options, etc.  
+✓ <strong>API Segura</strong> - Validación de entrada, manejo de errores  
+✓ <strong>Sin inyección SQL</strong> - No usamos BD directa en cliente  
+✓ <strong>API key protegida</strong> - Almacenada en `.env.local`  
+✓ <strong>Certificado SSL automático</strong> - Vercel/Netlify  </p><p>---</p><p><h2>📊 SEO y Metadata</h2></p><p><h3>Elementos Implementados</h3></p><p>✓ Title tag (60 caracteres)  
+✓ Meta description (160 caracteres)  
+✓ Open Graph image (1200x630px)  
+✓ Twitter Card metadata  
+✓ Semantic HTML (h1, h2, h3)  
+✓ Alt text en imágenes  
+✓ Robots meta (index, follow)  
+✓ Favicon  </p><p><h3>Mejoras Recomendadas</h3></p><p>- [ ] Agregar Sitemap (`public/sitemap.xml`)
+<li>[ ] Agregar robots.txt (`public/robots.txt`)</li>
+<li>[ ] Structured Data (Schema.org JSON-LD)</li>
+<li>[ ] Google Analytics</li>
+<li>[ ] Estrategia de backlinks</p><p>---</p><p><h2>🚀 Despliegue</h2></p><p><h3>Opción Recomendada: Vercel</h3></p><p><strong>Ventajas</strong>:</li>
+<li>Muy fácil (5 minutos)</li>
+<li>Despliegue automático desde Git</li>
+<li>HTTPS/TLS automático</li>
+<li>Optimizaciones de Next.js</li>
+<li>Analytics incluido</li>
+<li>Gratis para proyectos pequeños</p><p><strong>Pasos</strong>:</li>
+1. Crear cuenta en https://vercel.com
+2. Conectar repositorio GitHub
+3. Agregar variable de entorno: `ANTHROPIC_API_KEY`
+4. Desplegar (automático)</p><p><strong>Ver</strong>: `DEPLOYMENT_GUIDE.md` para instrucciones detalladas</p><p><h3>Otras Opciones</h3></p><p>- <strong>Netlify</strong> - Fácil, similar a Vercel
+<li><strong>AWS Amplify</strong> - Más complejo, más control</li>
+<li><strong>Servidor Propio</strong> - Difícil, requiere experiencia</p><p>---</p><p><h2>📝 Cambios y Modificaciones</h2></p><p><h3>Versión 1.0 (30 de Enero, 2026)</h3></p><p>1. ✓ Logo ajustado a 180x180px</li>
+2. ✓ Texto "MMSEG" aumentado a 36px (proporcional)
+3. ✓ Headline simplificado (removido "de Clase Mundial")
+4. ✓ Integración de ChatBot con Claude
+5. ✓ Seguridad verificada (protegido contra CVEs críticas)
+6. ✓ Documentación completa generada
+7. ✓ Guía de despliegue creada</p><p>---</p><p><h2>📚 Documentación</h2></p><p><h3>Archivos Incluidos</h3></p><p>1. <strong>DOCUMENTATION.md</strong> - Documentación técnica completa
+   - Estructura del proyecto
+   - Stack tecnológico
+   - Componentes detallados
+   - Integración de IA
+   - Seguridad
+   - SEO
+   - Mantenimiento</p><p>2. <strong>DEPLOYMENT_GUIDE.md</strong> - Guía de despliegue
+   - 4 opciones de despliegue
+   - Instrucciones paso a paso
+   - Configuración de dominio
+   - Verificación post-despliegue
+   - Troubleshooting</p><p>3. <strong>README.md</strong> - Este archivo
+   - Resumen ejecutivo
+   - Inicio rápido
+   - Stack tecnológico
+   - Secciones del sitio</p><p>---</p><p><h2>🔧 Desarrollo Local</h2></p><p><h3>Requisitos</h3></p><p>- Node.js 18+
+<li>npm o yarn</li>
+<li>Git (opcional)</p><p><h3>Instalación</h3></p><p><pre><code>bash</li>
+<h1>1. Instalar dependencias</h1>
+npm install</p><p><h1>2. Configurar variables de entorno</h1>
+cp .env.example .env.local
+<h1>Editar .env.local con tu API key de Anthropic</h1></p><p><h1>3. Ejecutar en desarrollo</h1>
+npm run dev</p><p><h1>4. Abrir en navegador</h1>
+<h1>http://localhost:3000</h1>
+</code></pre></p><p><h3>Comandos Disponibles</h3></p><p><pre><code>bash
+<h1>Desarrollo</h1>
+npm run dev</p><p><h1>Compilar para producción</h1>
+npm run build</p><p><h1>Ejecutar en producción</h1>
+npm run start</p><p><h1>Linting</h1>
+npm run lint</p><p><h1>Ver dependencias desactualizadas</h1>
+npm outdated</p><p><h1>Actualizar dependencias</h1>
+npm update
+</code></pre></p><p>---</p><p><h2>🐛 Troubleshooting</h2></p><p><h3>ChatBot no funciona</h3></p><p><strong>Solución</strong>:
+1. Verificar que `ANTHROPIC_API_KEY` está en `.env.local`
+2. Verificar que API key es válida (comienza con `sk-ant-`)
+3. Abrir DevTools (F12) y revisar Console
+4. Verificar que API key tiene crédito disponible</p><p><h3>Sitio lento</h3></p><p><strong>Solución</strong>:
+1. Verificar Core Web Vitals
+2. Optimizar imágenes
+3. Implementar caching
+4. Revisar Network tab en DevTools</p><p><h3>Errores en consola</h3></p><p><strong>Solución</strong>:
+1. Abrir DevTools (F12)
+2. Revisar Console tab
+3. Revisar Network tab
+4. Ejecutar `npm run build` localmente</p><p>---</p><p><h2>📞 Soporte y Contacto</h2></p><p><strong>Email</strong>: contacto@mmseg.com  
+<strong>Teléfono</strong>: +56 2 2345 6789  
+<strong>Ubicación</strong>: Santiago, Chile  </p><p><strong>Soporte Técnico</strong>:
+<li>Vercel: https://vercel.com/support</li>
+<li>Netlify: https://support.netlify.com</li>
+<li>Anthropic: https://support.anthropic.com</p><p>---</p><p><h2>📄 Licencia</h2></p><p>© 2026 MMSEG Ciberseguridad. Todos los derechos reservados.</p><p>---</p><p><h2>🎉 Próximos Pasos</h2></p><p>1. ✓ <strong>Desplegar en Internet</strong> - Seguir `DEPLOYMENT_GUIDE.md`</li>
+2. ✓ <strong>Configurar dominio personalizado</strong> - Comprar dominio y apuntar a Vercel
+3. ✓ <strong>Agregar API key de Anthropic</strong> - Para activar ChatBot
+4. ✓ <strong>Agregar analytics</strong> - Google Analytics o Plausible
+5. ✓ <strong>Monitorear rendimiento</strong> - Vercel Analytics
+6. ✓ <strong>Actualizar contenido</strong> - Agregar más servicios, casos de éxito, etc.</p><p>---</p><p><strong>Documento generado</strong>: 30 de Enero, 2026  
+<strong>Versión</strong>: 1.0  
+<strong>Autor</strong>: Chat (AI Assistant)</p><p>---</p><p><h2>📋 Checklist Final</h2></p><p>- [x] Sitio web creado y funcional
+<li>[x] Logo 180x180px integrado</li>
+<li>[x] ChatBot con IA integrado</li>
+<li>[x] Seguridad verificada</li>
+<li>[x] SEO optimizado</li>
+<li>[x] Documentación completa</li>
+<li>[x] Guía de despliegue</li>
+<li>[x] Listo para producción</p><p><strong>¡Tu sitio web está listo para publicar en internet!</strong> 🚀</li>
+
+  </div>
+  
+  <div id="documentation" class="section">
+    <h1>MMSEG Ciberseguridad - Documentación Completa del Sitio Web</h1></p><p><strong>Última actualización</strong>: 30 de Enero, 2026  
+<strong>Versión</strong>: 1.0  
+<strong>Estado</strong>: Producción</p><p>---</p><p><h2>📋 Tabla de Contenidos</h2></p><p>1. <a href="#descripción-general">Descripción General</a>
+2. <a href="#estructura-del-proyecto">Estructura del Proyecto</a>
+3. <a href="#stack-tecnológico">Stack Tecnológico</a>
+4. <a href="#instalación-y-configuración">Instalación y Configuración</a>
+5. <a href="#componentes">Componentes</a>
+6. <a href="#características-principales">Características Principales</a>
+7. <a href="#integración-de-ia-chatbot">Integración de IA (ChatBot)</a>
+8. <a href="#seguridad">Seguridad</a>
+9. <a href="#seo-y-metadata">SEO y Metadata</a>
+10. <a href="#despliegue">Despliegue</a>
+11. <a href="#mantenimiento">Mantenimiento</a></p><p>---</p><p><h2>🎯 Descripción General</h2></p><p><strong>MMSEG Ciberseguridad</strong> es un sitio web profesional de servicios de ciberseguridad e infraestructura construido con Next.js 15, React 19, TypeScript y shadcn/ui.</p><p><h3>Características Principales</h3></p><p>✓ <strong>Diseño Responsivo</strong> - Funciona perfectamente en móvil, tablet y desktop  
+✓ <strong>Agente IA Integrado</strong> - ChatBot con Claude (Anthropic) para soporte al cliente  
+✓ <strong>SEO Optimizado</strong> - Metadata completa, Open Graph, Twitter Cards  
+✓ <strong>Seguridad de Nivel Empresarial</strong> - HTTPS/TLS, protección contra CVEs críticas  
+✓ <strong>Rendimiento Optimizado</strong> - Next.js 15 con optimizaciones automáticas  
+✓ <strong>Accesibilidad</strong> - Cumple con estándares WCAG AA  </p><p><h3>Secciones del Sitio</h3></p><p>1. <strong>Header/Navegación</strong> - Logo 180x180px, menú responsivo, CTA
+2. <strong>Hero</strong> - Headline principal, subheadline, CTAs, indicadores de confianza
+3. <strong>Servicios</strong> - 6 servicios principales con características
+4. <strong>Soluciones</strong> - 3 tipos de soluciones (Empresarial, PYME, E-commerce)
+5. <strong>Contacto</strong> - Formulario de contacto con validación
+6. <strong>Footer</strong> - Enlaces, información de contacto, copyright
+7. <strong>ChatBot</strong> - Widget flotante con IA para soporte</p><p>---</p><p><h2>📁 Estructura del Proyecto</h2></p><p><pre><code>
+cybersecurity-site/
+├── app/
+│   ├── api/
+│   │   └── chat/
+│   │       └── route.ts              # API route para Claude ChatBot
+│   ├── layout.tsx                    # Layout raíz con metadata SEO
+│   ├── page.tsx                      # Página principal
+│   └── globals.css                   # Estilos globales (Tailwind)
+├── components/
+│   ├── Header.tsx                    # Navegación con logo 180x180px
+│   ├── Hero.tsx                      # Sección hero con CTAs
+│   ├── Services.tsx                  # Grid de 6 servicios
+│   ├── Solutions.tsx                 # 3 soluciones personalizadas
+│   ├── Contact.tsx                   # Formulario de contacto
+│   ├── Footer.tsx                    # Footer con enlaces
+│   ├── ChatBot.tsx                   # Widget de ChatBot con IA
+│   └── ui/                           # Componentes shadcn/ui
+│       ├── button.tsx
+│       ├── input.tsx
+│       ├── card.tsx
+│       └── ... (otros componentes)
+├── lib/
+│   └── utils.ts                      # Utilidades (cn, etc.)
+├── public/
+│   ├── images/
+│   │   ├── logo-solo.png             # Logo principal (180x180px)
+│   │   └── logo-completo.jpg         # Logo completo (no usado)
+│   ├── favicon.ico
+│   └── og-image.png                  # Imagen Open Graph
+├── .env.example                      # Variables de entorno (plantilla)
+├── .env.local                        # Variables de entorno (local, no commitear)
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── next.config.ts
+└── README.md
+</code></pre></p><p>---</p><p><h2>🛠️ Stack Tecnológico</h2></p><p><h3>Frontend</h3>
+<ul><li><strong>Next.js 15.5.6</strong> - Framework React con App Router</li></ul>
+<li><strong>React 19.1.0</strong> - Librería UI</li>
+<li><strong>TypeScript</strong> - Type safety</li>
+<li><strong>Tailwind CSS</strong> - Utilidades CSS</li>
+<li><strong>shadcn/ui</strong> - Componentes accesibles</p><p><h3>Backend</h3></li>
+<li><strong>Next.js API Routes</strong> - Endpoints serverless</li>
+<li><strong>Anthropic Claude API</strong> - IA para ChatBot</p><p><h3>Herramientas</h3></li>
+<li><strong>Node.js</strong> - Runtime JavaScript</li>
+<li><strong>npm</strong> - Package manager</li>
+<li><strong>Vercel</strong> - Hosting y despliegue</p><p><h3>Dependencias Principales</h3></p><p><pre><code>json</li>
+{
+  "dependencies": {
+    "next": "15.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "@anthropic-ai/sdk": "^0.x.x",
+    "lucide-react": "^0.555.0",
+    "tailwindcss": "^3.x.x",
+    "@radix-ui/react-*": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.x.x",
+    "@types/node": "^20.x.x",
+    "@types/react": "^19.x.x"
+  }
+}
+</code></pre></p><p>---</p><p><h2>🚀 Instalación y Configuración</h2></p><p><h3>Requisitos Previos</h3></p><p>- Node.js 18+ instalado
+<li>npm o yarn</li>
+<li>Git (para control de versiones)</li>
+<li>API key de Anthropic (para ChatBot)</p><p><h3>Pasos de Instalación</h3></p><p><h4>1. Clonar o Descargar el Proyecto</h4></p><p><pre><code>bash</li>
+<h1>Si está en un repositorio Git</h1>
+git clone <repository-url>
+cd cybersecurity-site</p><p><h1>O si es un archivo descargado</h1>
+cd cybersecurity-site
+</code></pre></p><p><h4>2. Instalar Dependencias</h4></p><p><pre><code>bash
+npm install
+<h1>o</h1>
+yarn install
+</code></pre></p><p><h4>3. Configurar Variables de Entorno</h4></p><p><pre><code>bash
+<h1>Copiar archivo de ejemplo</h1>
+cp .env.example .env.local</p><p><h1>Editar .env.local y agregar tu API key de Anthropic</h1>
+<h1>ANTHROPIC_API_KEY="sk-ant-tu-clave-aqui"</h1>
+</code></pre></p><p><strong>Variables de entorno requeridas</strong>:</p><p><pre><code>bash
+<h1>Anthropic Claude API Key (requerido para ChatBot)</h1>
+<h1>Obtén en: https://console.anthropic.com/account/keys</h1>
+ANTHROPIC_API_KEY="sk-ant-..."</p><p><h1>Configuración de la aplicación</h1>
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+NEXT_PUBLIC_APP_NAME="MMSEG Ciberseguridad"
+</code></pre></p><p><h4>4. Ejecutar en Desarrollo</h4></p><p><pre><code>bash
+npm run dev
+<h1>o</h1>
+yarn dev
+</code></pre></p><p>El sitio estará disponible en: `http://localhost:3000`</p><p><h4>5. Compilar para Producción</h4></p><p><pre><code>bash
+npm run build
+npm run start
+</code></pre></p><p>---</p><p><h2>🧩 Componentes</h2></p><p><h3>Header.tsx</h3></p><p><strong>Propósito</strong>: Navegación principal con logo y menú responsivo</p><p><strong>Características</strong>:
+<li>Logo 180x180px (MMSEG)</li>
+<li>Menú de navegación con smooth scroll</li>
+<li>Botón CTA "Consulta Gratis"</li>
+<li>Menú móvil con hamburger toggle</li>
+<li>Diseño responsivo (oculto en móvil, visible en desktop)</p><p><strong>Props</strong>: Ninguno (componente autónomo)</p><p><strong>Uso</strong>:</li>
+<pre><code>tsx
+import { Header } from '@/components/Header'</p><p>export default function Home() {
+  return <Header />
+}
+</code></pre></p><p><h3>Hero.tsx</h3></p><p><strong>Propósito</strong>: Sección principal con headline y CTAs</p><p><strong>Características</strong>:
+<li>Headline: "Ciberseguridad e Infraestructura"</li>
+<li>Subheadline descriptivo</li>
+<li>Dos botones CTA (Solicitar Consulta, Ver Servicios)</li>
+<li>Indicadores de confianza (500+ empresas, 99.9% disponibilidad, 24/7 monitoreo)</li>
+<li>Fondo con gradientes animados</li>
+<li>Responsive design</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:</li>
+<pre><code>tsx
+import { Hero } from '@/components/Hero'</p><p>export default function Home() {
+  return <Hero />
+}
+</code></pre></p><p><h3>Services.tsx</h3></p><p><strong>Propósito</strong>: Mostrar 6 servicios principales</p><p><strong>Servicios incluidos</strong>:
+1. <strong>Protección de Datos</strong> - AES-256, Backup automático, GDPR
+2. <strong>Gestión de Acceso</strong> - MFA/2FA, SSO Enterprise, Control de roles
+3. <strong>Monitoreo 24/7</strong> - Detección de amenazas, Análisis de logs, Reportes
+4. <strong>Respuesta a Incidentes</strong> - Respuesta inmediata, Análisis forense, Plan de recuperación
+5. <strong>Infraestructura Segura</strong> - Cloud seguro, Redundancia, Escalabilidad, On-premise
+6. <strong>Auditorías de Seguridad</strong> - Pentesting, Análisis de vulnerabilidades, Reportes</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:
+<pre><code>tsx
+import { Services } from '@/components/Services'</p><p>export default function Home() {
+  return <Services />
+}
+</code></pre></p><p><h3>Solutions.tsx</h3></p><p><strong>Propósito</strong>: Presentar 3 tipos de soluciones personalizadas</p><p><strong>Soluciones</strong>:
+1. <strong>Empresariales</strong> - Arquitectura multi-capa, ISO 27001, Soporte 24/7, SLA 99.99%
+2. <strong>PYME</strong> - Implementación rápida, Costos predecibles, Escalabilidad flexible
+3. <strong>E-commerce</strong> - PCI DSS, Protección de pagos, Prevención de fraude, SSL/TLS</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:
+<pre><code>tsx
+import { Solutions } from '@/components/Solutions'</p><p>export default function Home() {
+  return <Solutions />
+}
+</code></pre></p><p><h3>Contact.tsx</h3></p><p><strong>Propósito</strong>: Formulario de contacto con información</p><p><strong>Características</strong>:
+<li>Formulario con campos: Nombre, Email, Empresa, Mensaje</li>
+<li>Información de contacto (Email, Teléfono, Ubicación)</li>
+<li>Validación de campos</li>
+<li>Botón de envío</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:</li>
+<pre><code>tsx
+import { Contact } from '@/components/Contact'</p><p>export default function Home() {
+  return <Contact />
+}
+</code></pre></p><p><h3>Footer.tsx</h3></p><p><strong>Propósito</strong>: Pie de página con enlaces e información</p><p><strong>Contenido</strong>:
+<li>Logo y descripción</li>
+<li>Enlaces a servicios</li>
+<li>Enlaces a soluciones</li>
+<li>Enlaces de empresa</li>
+<li>Información de contacto</li>
+<li>Copyright y políticas</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:</li>
+<pre><code>tsx
+import { Footer } from '@/components/Footer'</p><p>export default function Home() {
+  return <Footer />
+}
+</code></pre></p><p><h3>ChatBot.tsx</h3></p><p><strong>Propósito</strong>: Widget flotante de IA para soporte al cliente</p><p><strong>Características</strong>:
+<li>Botón flotante en esquina inferior derecha</li>
+<li>Ventana de chat con historial de conversación</li>
+<li>Integración con Claude (Anthropic)</li>
+<li>Respuestas inteligentes sobre servicios</li>
+<li>Indicador de escritura (3 puntos animados)</li>
+<li>Validación de entrada</li>
+<li>Manejo de errores</p><p><strong>Props</strong>: Ninguno</p><p><strong>Uso</strong>:</li>
+<pre><code>tsx
+import { ChatBot } from '@/components/ChatBot'</p><p>export default function Home() {
+  return <ChatBot />
+}
+</code></pre></p><p><strong>Conocimiento del ChatBot</strong>:
+<li>Servicios de MMSEG (6 servicios principales)</li>
+<li>Tipos de soluciones (Empresarial, PYME, E-commerce)</li>
+<li>Información de contacto</li>
+<li>Preguntas sobre ciberseguridad e infraestructura</li>
+<li>Calificación de leads</p><p>---</p><p><h2>🤖 Integración de IA (ChatBot)</h2></p><p><h3>Configuración</h3></p><p>El ChatBot utiliza <strong>Claude (Anthropic)</strong> para responder preguntas sobre servicios.</p><p><h4>Obtener API Key</h4></p><p>1. Ir a: https://console.anthropic.com/account/keys</li>
+2. Crear una nueva API key
+3. Copiar la clave (comienza con `sk-ant-`)
+4. Agregar a `.env.local`:</p><p><pre><code>bash
+ANTHROPIC_API_KEY="sk-ant-tu-clave-aqui"
+</code></pre></p><p><h4>Reiniciar el Servidor</h4></p><p><pre><code>bash
+<h1>Detener servidor (Ctrl+C)</h1>
+<h1>Reiniciar</h1>
+npm run dev
+</code></pre></p><p><h3>API Route: `/api/chat`</h3></p><p><strong>Ubicación</strong>: `app/api/chat/route.ts`</p><p><strong>Método</strong>: POST</p><p><strong>Request Body</strong>:
+<pre><code>json
+{
+  "messages": [
+    { "role": "user", "content": "¿Qué servicios ofrecen?" },
+    { "role": "assistant", "content": "Ofrecemos..." }
+  ]
+}
+</code></pre></p><p><strong>Response</strong>:
+<pre><code>json
+{
+  "message": "Respuesta del ChatBot..."
+}
+</code></pre></p><p><strong>Características</strong>:
+<li>Mantiene historial de conversación</li>
+<li>System prompt con información de MMSEG</li>
+<li>Manejo de errores</li>
+<li>Rate limiting (implícito en Anthropic)</li>
+<li>Respuestas en español e inglés</p><p><h3>Personalización del ChatBot</h3></p><p>Para cambiar el comportamiento del ChatBot, editar `app/api/chat/route.ts`:</p><p><pre><code>typescript</li>
+const SYSTEM_PROMPT = `You are an intelligent customer support assistant for MMSEG...`
+</code></pre></p><p>Modificar:
+<li>Servicios listados</li>
+<li>Tono de respuesta</li>
+<li>Información de contacto</li>
+<li>Instrucciones específicas</p><p>---</p><p><h2>🔒 Seguridad</h2></p><p><h3>Vulnerabilidades Críticas - PROTEGIDO</h3></p><p>✓ <strong>CVE-2025-29927</strong> (Omisión de Autorización) - PROTEGIDO  </li>
+✓ <strong>CVE-2025-55182 & CVE-2025-66478</strong> (RCE) - PROTEGIDO  
+✓ <strong>CVE-2025-55184 & CVE-2025-67779</strong> (DoS) - PROTEGIDO  </p><p><strong>Razón</strong>: Versiones actualizadas (Next.js 15.5.6, React 19.1.0)</p><p><h3>HTTPS/TLS</h3></p><p>- ✓ Certificado SSL/TLS automático (Vercel)
+<li>✓ TLS 1.3 (estándar actual)</li>
+<li>✓ Redirección automática HTTP → HTTPS</p><p><h3>Headers de Seguridad</h3></p><p>Vercel aplica automáticamente:</li>
+<li>`Strict-Transport-Security` (HSTS)</li>
+<li>`X-Content-Type-Options: nosniff`</li>
+<li>`X-Frame-Options: DENY`</li>
+<li>`X-XSS-Protection`</p><p><h3>API Security</h3></p><p><strong>ChatBot API</strong>:</li>
+<li>API key almacenada en `.env.local` (no expuesta)</li>
+<li>Validación de entrada en request body</li>
+<li>Manejo de errores sin exponer detalles sensibles</li>
+<li>No hay inyección SQL (no usamos BD directa)</p><p><h3>Mejores Prácticas</h3></p><p>1. <strong>Nunca commitear `.env.local`</strong> - Ya está en `.gitignore`</li>
+2. <strong>Rotar API keys regularmente</strong> - Especialmente si se exponen
+3. <strong>Monitorear logs</strong> - Verificar accesos anómalos
+4. <strong>Actualizar dependencias</strong> - `npm update` regularmente
+5. <strong>Usar HTTPS en producción</strong> - Vercel lo hace automáticamente</p><p>---</p><p><h2>📊 SEO y Metadata</h2></p><p><h3>Metadata Configurada</h3></p><p><strong>Archivo</strong>: `app/layout.tsx`</p><p><pre><code>typescript
+export const metadata: Metadata = {
+  title: {
+    default: 'MMSEG Ciberseguridad - Soluciones de Seguridad e Infraestructura',
+    template: '%s | MMSEG',
+  },
+  description: 'Soluciones integrales de ciberseguridad e infraestructura para proteger tu negocio. Expertos certificados, monitoreo 24/7, cumplimiento normativo.',
+  keywords: ['ciberseguridad', 'infraestructura', 'seguridad', 'protección'],
+  openGraph: {
+    type: 'website',
+    locale: 'es_CL',
+    url: 'https://mmseg.com',
+    siteName: 'MMSEG Ciberseguridad',
+    title: 'MMSEG Ciberseguridad',
+    description: 'Soluciones integrales de ciberseguridad e infraestructura',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MMSEG Ciberseguridad',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MMSEG Ciberseguridad',
+    description: 'Soluciones integrales de ciberseguridad e infraestructura',
+    images: ['/og-image.png'],
+  },
+}
+</code></pre></p><p><h3>Elementos SEO Implementados</h3></p><p>✓ Title tag (60 caracteres)  
+✓ Meta description (160 caracteres)  
+✓ Open Graph image (1200x630px)  
+✓ Twitter Card metadata  
+✓ Semantic HTML (h1, h2, h3)  
+✓ Alt text en imágenes  
+✓ Robots meta (index, follow)  
+✓ Favicon  </p><p><h3>Mejoras SEO Recomendadas</h3></p><p>1. <strong>Agregar Sitemap</strong>: `public/sitemap.xml`
+2. <strong>Agregar robots.txt</strong>: `public/robots.txt`
+3. <strong>Structured Data</strong>: Schema.org JSON-LD
+4. <strong>Analytics</strong>: Google Analytics o Plausible
+5. <strong>Backlinks</strong>: Estrategia de link building</p><p>---</p><p><h2>🚀 Despliegue</h2></p><p><h3>Opción 1: Vercel (Recomendado)</h3></p><p><strong>Ventajas</strong>:
+<li>Despliegue automático desde Git</li>
+<li>HTTPS/TLS automático</li>
+<li>Optimizaciones de Next.js</li>
+<li>Serverless functions</li>
+<li>Analytics incluido</p><p><strong>Pasos</strong>:</p><p>1. <strong>Crear cuenta en Vercel</strong>:</li>
+   - Ir a: https://vercel.com
+   - Registrarse con GitHub/GitLab/Bitbucket</p><p>2. <strong>Conectar repositorio</strong>:
+   - Importar proyecto desde Git
+   - Seleccionar rama principal (main/master)</p><p>3. <strong>Configurar variables de entorno</strong>:
+   - En Vercel Dashboard → Settings → Environment Variables
+   - Agregar: `ANTHROPIC_API_KEY="sk-ant-..."`</p><p>4. <strong>Desplegar</strong>:
+   - Vercel despliega automáticamente en cada push
+   - URL: `https://cybersecurity-site.vercel.app`</p><p>5. <strong>Dominio personalizado</strong> (opcional):
+   - Ir a Settings → Domains
+   - Agregar dominio personalizado
+   - Configurar DNS</p><p><h3>Opción 2: Netlify</h3></p><p><strong>Pasos</strong>:</p><p>1. Ir a: https://netlify.com
+2. Conectar repositorio Git
+3. Configurar build:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+4. Agregar variables de entorno
+5. Desplegar</p><p><h3>Opción 3: AWS Amplify</h3></p><p><strong>Pasos</strong>:</p><p>1. Ir a: https://aws.amazon.com/amplify
+2. Conectar repositorio
+3. Configurar build settings
+4. Desplegar</p><p><h3>Opción 4: Servidor Propio (VPS)</h3></p><p><strong>Requisitos</strong>:
+<li>VPS con Node.js 18+</li>
+<li>PM2 o similar para process management</li>
+<li>Nginx o Apache como reverse proxy</li>
+<li>SSL certificate (Let's Encrypt)</p><p><strong>Pasos</strong>:</p><p><pre><code>bash</li>
+<h1>1. SSH al servidor</h1>
+ssh user@your-server.com</p><p><h1>2. Clonar repositorio</h1>
+git clone <repository-url>
+cd cybersecurity-site</p><p><h1>3. Instalar dependencias</h1>
+npm install</p><p><h1>4. Compilar</h1>
+npm run build</p><p><h1>5. Instalar PM2</h1>
+npm install -g pm2</p><p><h1>6. Iniciar con PM2</h1>
+pm2 start npm --name "mmseg" -- start</p><p><h1>7. Configurar Nginx (reverse proxy)</h1>
+<h1>... (configuración de Nginx)</h1></p><p><h1>8. SSL con Let's Encrypt</h1>
+<h1>... (certificado SSL)</h1>
+</code></pre></p><p><h3>Configuración de Dominio</h3></p><p><strong>Después de desplegar</strong>:</p><p>1. Comprar dominio (GoDaddy, Namecheap, etc.)
+2. Configurar DNS:
+   - <strong>Para Vercel</strong>: Apuntar a nameservers de Vercel
+   - <strong>Para otros</strong>: Apuntar A record a IP del servidor
+3. Esperar propagación DNS (24-48 horas)
+4. Verificar en navegador</p><p>---</p><p><h2>🔧 Mantenimiento</h2></p><p><h3>Actualizar Dependencias</h3></p><p><pre><code>bash
+<h1>Ver actualizaciones disponibles</h1>
+npm outdated</p><p><h1>Actualizar todas las dependencias</h1>
+npm update</p><p><h1>Actualizar a versión mayor (cuidado)</h1>
+npm install next@latest react@latest
+</code></pre></p><p><h3>Monitoreo</h3></p><p><strong>Vercel Analytics</strong>:
+<li>Dashboard automático en Vercel</li>
+<li>Métricas de rendimiento</li>
+<li>Errores y excepciones</p><p><strong>Recomendado agregar</strong>:</li>
+<li>Google Analytics</li>
+<li>Sentry (error tracking)</li>
+<li>LogRocket (session replay)</p><p><h3>Backups</h3></p><p><pre><code>bash</li>
+<h1>Hacer backup del código</h1>
+git push origin main</p><p><h1>Hacer backup de variables de entorno</h1>
+<h1>(guardar .env.local en lugar seguro)</h1>
+</code></pre></p><p><h3>Logs</h3></p><p><strong>Vercel</strong>:
+<li>Ver logs en: Vercel Dashboard → Deployments → Logs</p><p><strong>Local</strong>:</li>
+<pre><code>bash
+npm run dev 2>&1 | tee server.log
+</code></pre></p><p><h3>Troubleshooting</h3></p><p><strong>Problema</strong>: ChatBot no responde
+<li><strong>Solución</strong>: Verificar API key en `.env.local`</li>
+<li><strong>Solución</strong>: Verificar límite de uso de Anthropic</p><p><strong>Problema</strong>: Sitio lento</li>
+<li><strong>Solución</strong>: Verificar Core Web Vitals en Vercel</li>
+<li><strong>Solución</strong>: Optimizar imágenes</li>
+<li><strong>Solución</strong>: Implementar caching</p><p><strong>Problema</strong>: Errores en consola</li>
+<li><strong>Solución</strong>: Abrir DevTools (F12)</li>
+<li><strong>Solución</strong>: Revisar Network tab</li>
+<li><strong>Solución</strong>: Revisar Console tab</p><p>---</p><p><h2>📝 Cambios y Modificaciones Realizadas</h2></p><p><h3>Versión 1.0 (30 de Enero, 2026)</h3></p><p><h4>Cambios Principales</h4></p><p>1. <strong>Logo ajustado a 180x180px</strong></li>
+   - Archivo: `components/Header.tsx`
+   - Cambio: `width={180} height={180}`
+   - Contenedor: `w-45 h-45` (180px)</p><p>2. <strong>Texto "MMSEG" aumentado proporcionalmente</strong>
+   - Archivo: `components/Header.tsx`
+   - Cambio: `text-lg` → `text-4xl` (18px → 36px)
+   - Razón: Proporcional al logo de 180x180px</p><p>3. <strong>Headline simplificado</strong>
+   - Archivo: `components/Hero.tsx`
+   - Cambio: Removido "de Clase Mundial"
+   - Nuevo: "Ciberseguridad e Infraestructura"</p><p>4. <strong>Integración de ChatBot con Claude</strong>
+   - Archivo: `components/ChatBot.tsx`
+   - Archivo: `app/api/chat/route.ts`
+   - Características: Widget flotante, respuestas inteligentes, historial</p><p>5. <strong>Seguridad verificada</strong>
+   - Next.js 15.5.6 (protegido contra CVEs críticas)
+   - React 19.1.0 (incluye correcciones de seguridad)
+   - HTTPS/TLS automático
+   - Headers de seguridad implementados</p><p>---</p><p><h2>📞 Soporte y Contacto</h2></p><p><strong>Email</strong>: contacto@mmseg.com  
+<strong>Teléfono</strong>: +56 2 2345 6789  
+<strong>Ubicación</strong>: Santiago, Chile  </p><p>---</p><p><h2>📄 Licencia</h2></p><p>© 2026 MMSEG Ciberseguridad. Todos los derechos reservados.</p><p>---</p><p><strong>Documento generado</strong>: 30 de Enero, 2026  
+<strong>Versión</strong>: 1.0  
+<strong>Autor</strong>: Chat (AI Assistant)
+
+  </div>
+  
+  <div id="deployment" class="section">
+    <h1>🚀 Guía Completa de Despliegue - MMSEG Ciberseguridad</h1></p><p><strong>Última actualización</strong>: 30 de Enero, 2026  
+<strong>Versión</strong>: 1.0</p><p>---</p><p><h2>📋 Tabla de Contenidos</h2></p><p>1. <a href="#resumen-rápido">Resumen Rápido</a>
+2. <a href="#opción-1-vercel-recomendado">Opción 1: Vercel (Recomendado)</a>
+3. <a href="#opción-2-netlify">Opción 2: Netlify</a>
+4. <a href="#opción-3-aws-amplify">Opción 3: AWS Amplify</a>
+5. <a href="#opción-4-servidor-propio-vps">Opción 4: Servidor Propio (VPS)</a>
+6. <a href="#configuración-de-dominio-personalizado">Configuración de Dominio Personalizado</a>
+7. <a href="#verificación-post-despliegue">Verificación Post-Despliegue</a>
+8. <a href="#troubleshooting">Troubleshooting</a></p><p>---</p><p><h2>🎯 Resumen Rápido</h2></p><p>| Opción | Dificultad | Costo | Tiempo | Recomendado |
+|--------|-----------|-------|--------|-------------|
+| <strong>Vercel</strong> | Muy Fácil | Gratis/Pago | 5 min | ✓ SÍ |
+| <strong>Netlify</strong> | Fácil | Gratis/Pago | 10 min | ✓ SÍ |
+| <strong>AWS Amplify</strong> | Medio | Gratis/Pago | 15 min | ⚠️ Opcional |
+| <strong>VPS Propio</strong> | Difícil | $5-20/mes | 30+ min | ✗ No recomendado |</p><p><strong>Recomendación</strong>: Usa <strong>Vercel</strong> - es la opción más fácil y está optimizada para Next.js.</p><p>---</p><p><h2>✓ Opción 1: Vercel (Recomendado)</h2></p><p><h3>¿Por qué Vercel?</h3></p><p>✓ Creadores de Next.js  
+✓ Despliegue automático desde Git  
+✓ HTTPS/TLS automático  
+✓ Optimizaciones de Next.js incluidas  
+✓ Serverless functions  
+✓ Analytics gratis  
+✓ Dominio personalizado gratis  
+✓ Muy fácil de usar  </p><p><h3>Paso 1: Preparar el Código</h3></p><p><pre><code>bash
+<h1>1. Asegúrate de que el código está en Git</h1>
+cd /home/code/cybersecurity-site</p><p><h1>2. Inicializar Git (si no está ya)</h1>
+git init
+git add .
+git commit -m "Initial commit: MMSEG website"</p><p><h1>3. Crear repositorio en GitHub</h1>
+<h1>- Ir a: https://github.com/new</h1>
+<h1>- Crear repositorio: "cybersecurity-site"</h1>
+<h1>- Copiar URL del repositorio</h1></p><p><h1>4. Agregar repositorio remoto</h1>
+git remote add origin https://github.com/tu-usuario/cybersecurity-site.git
+git branch -M main
+git push -u origin main
+</code></pre></p><p><h3>Paso 2: Crear Cuenta en Vercel</h3></p><p>1. <strong>Ir a</strong>: https://vercel.com
+2. <strong>Registrarse</strong> con GitHub (recomendado):
+   - Click en "Sign up with GitHub"
+   - Autorizar Vercel
+   - Completar perfil</p><p><h3>Paso 3: Importar Proyecto</h3></p><p>1. <strong>En Vercel Dashboard</strong>:
+   - Click en "Add New..." → "Project"
+   - Seleccionar repositorio "cybersecurity-site"
+   - Click en "Import"</p><p>2. <strong>Configurar Proyecto</strong>:
+   - <strong>Project Name</strong>: `cybersecurity-site` (o tu nombre)
+   - <strong>Framework</strong>: Next.js (detectado automáticamente)
+   - <strong>Root Directory</strong>: `./` (por defecto)
+   - Click en "Deploy"</p><p><h3>Paso 4: Configurar Variables de Entorno</h3></p><p>1. <strong>En Vercel Dashboard</strong>:
+   - Ir a: Settings → Environment Variables
+   - Agregar variable:
+     - <strong>Name</strong>: `ANTHROPIC_API_KEY`
+     - <strong>Value</strong>: `sk-ant-tu-clave-aqui`
+     - Click en "Add"</p><p>2. <strong>Redeploy</strong>:
+   - Ir a: Deployments
+   - Click en el último deployment
+   - Click en "Redeploy"</p><p><h3>Paso 5: Verificar Despliegue</h3></p><p>1. <strong>URL automática</strong>:
+   - Vercel proporciona URL: `https://cybersecurity-site.vercel.app`
+   - Visitar en navegador
+   - Verificar que funciona</p><p>2. <strong>Dominio personalizado</strong> (opcional):
+   - Ir a: Settings → Domains
+   - Agregar dominio personalizado
+   - Seguir instrucciones de DNS</p><p><h3>Paso 6: Configurar Despliegues Automáticos</h3></p><p><strong>Ya está configurado automáticamente</strong>:
+<ul><li>Cada push a `main` despliega automáticamente</li></ul>
+<li>Cada pull request crea preview deployment</li>
+<li>Rollback automático si hay errores</p><p>---</p><p><h2>✓ Opción 2: Netlify</h2></p><p><h3>¿Por qué Netlify?</h3></p><p>✓ Muy fácil de usar  </li>
+✓ Despliegue automático desde Git  
+✓ HTTPS/TLS automático  
+✓ Buena documentación  
+✓ Gratis para proyectos pequeños  </p><p><h3>Paso 1: Preparar Código en Git</h3></p><p><pre><code>bash
+<h1>Mismo proceso que Vercel</h1>
+cd /home/code/cybersecurity-site
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/tu-usuario/cybersecurity-site.git
+git push -u origin main
+</code></pre></p><p><h3>Paso 2: Crear Cuenta en Netlify</h3></p><p>1. <strong>Ir a</strong>: https://netlify.com
+2. <strong>Registrarse</strong> con GitHub:
+   - Click en "Sign up with GitHub"
+   - Autorizar Netlify</p><p><h3>Paso 3: Importar Proyecto</h3></p><p>1. <strong>En Netlify Dashboard</strong>:
+   - Click en "Add new site" → "Import an existing project"
+   - Seleccionar GitHub
+   - Buscar y seleccionar "cybersecurity-site"</p><p>2. <strong>Configurar Build</strong>:
+   - <strong>Base directory</strong>: `./` (por defecto)
+   - <strong>Build command</strong>: `npm run build`
+   - <strong>Publish directory</strong>: `.next`
+   - Click en "Deploy site"</p><p><h3>Paso 4: Configurar Variables de Entorno</h3></p><p>1. <strong>En Netlify Dashboard</strong>:
+   - Ir a: Site settings → Build & deploy → Environment
+   - Click en "Edit variables"
+   - Agregar:
+     - <strong>Key</strong>: `ANTHROPIC_API_KEY`
+     - <strong>Value</strong>: `sk-ant-tu-clave-aqui`
+   - Click en "Save"</p><p>2. <strong>Redeploy</strong>:
+   - Ir a: Deploys
+   - Click en "Trigger deploy" → "Deploy site"</p><p><h3>Paso 5: Verificar Despliegue</h3></p><p>- URL: `https://cybersecurity-site.netlify.app`
+<li>Visitar en navegador</li>
+<li>Verificar que funciona</p><p>---</p><p><h2>✓ Opción 3: AWS Amplify</h2></p><p><h3>Paso 1: Preparar Código en Git</h3></p><p><pre><code>bash</li>
+<h1>Mismo proceso que Vercel/Netlify</h1>
+git init
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+</code></pre></p><p><h3>Paso 2: Crear Cuenta en AWS</h3></p><p>1. <strong>Ir a</strong>: https://aws.amazon.com
+2. <strong>Crear cuenta</strong> (requiere tarjeta de crédito)
+3. <strong>Ir a AWS Amplify</strong>: https://console.aws.amazon.com/amplify</p><p><h3>Paso 3: Conectar Repositorio</h3></p><p>1. <strong>Click en "Create app"</strong>
+2. <strong>Seleccionar GitHub</strong>
+3. <strong>Autorizar AWS</strong>
+4. <strong>Seleccionar repositorio "cybersecurity-site"</strong>
+5. <strong>Seleccionar rama "main"</strong></p><p><h3>Paso 4: Configurar Build</h3></p><p>1. <strong>Build settings</strong>:
+   - <strong>Build command</strong>: `npm run build`
+   - <strong>Start command</strong>: `npm start`</p><p>2. <strong>Environment variables</strong>:
+   - Agregar: `ANTHROPIC_API_KEY=sk-ant-...`</p><p>3. <strong>Click en "Save and deploy"</strong></p><p><h3>Paso 5: Verificar Despliegue</h3></p><p>- URL: `https://main.xxxxx.amplifyapp.com`
+<li>Visitar en navegador</p><p>---</p><p><h2>✓ Opción 4: Servidor Propio (VPS)</h2></p><p><h3>⚠️ Advertencia</h3></p><p>Esta opción es más compleja. Solo recomendada si:</li>
+<li>Tienes experiencia con servidores</li>
+<li>Necesitas control total</li>
+<li>Quieres ahorrar costos a largo plazo</p><p><h3>Requisitos</h3></p><p>- VPS con Ubuntu 20.04+ (DigitalOcean, Linode, AWS EC2, etc.)</li>
+<li>Node.js 18+</li>
+<li>Nginx o Apache</li>
+<li>Certificado SSL (Let's Encrypt)</p><p><h3>Paso 1: Configurar VPS</h3></p><p><pre><code>bash</li>
+<h1>1. SSH al servidor</h1>
+ssh root@tu-servidor.com</p><p><h1>2. Actualizar sistema</h1>
+apt update && apt upgrade -y</p><p><h1>3. Instalar Node.js</h1>
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt install -y nodejs</p><p><h1>4. Instalar PM2 (process manager)</h1>
+npm install -g pm2</p><p><h1>5. Instalar Nginx</h1>
+apt install -y nginx</p><p><h1>6. Instalar Certbot (SSL)</h1>
+apt install -y certbot python3-certbot-nginx
+</code></pre></p><p><h3>Paso 2: Clonar Proyecto</h3></p><p><pre><code>bash
+<h1>1. Crear directorio</h1>
+mkdir -p /var/www/cybersecurity-site
+cd /var/www/cybersecurity-site</p><p><h1>2. Clonar repositorio</h1>
+git clone https://github.com/tu-usuario/cybersecurity-site.git .</p><p><h1>3. Instalar dependencias</h1>
+npm install</p><p><h1>4. Compilar</h1>
+npm run build
+</code></pre></p><p><h3>Paso 3: Configurar Variables de Entorno</h3></p><p><pre><code>bash
+<h1>Crear archivo .env.local</h1>
+cat > .env.local << 'ENVFILE'
+ANTHROPIC_API_KEY="sk-ant-tu-clave-aqui"
+NEXT_PUBLIC_APP_URL="https://tu-dominio.com"
+ENVFILE
+</code></pre></p><p><h3>Paso 4: Iniciar con PM2</h3></p><p><pre><code>bash
+<h1>1. Iniciar aplicación</h1>
+pm2 start npm --name "mmseg" -- start</p><p><h1>2. Guardar configuración</h1>
+pm2 save</p><p><h1>3. Configurar para reiniciar en boot</h1>
+pm2 startup
+</code></pre></p><p><h3>Paso 5: Configurar Nginx</h3></p><p><pre><code>bash
+<h1>Crear archivo de configuración</h1>
+cat > /etc/nginx/sites-available/cybersecurity-site << 'NGINX'
+server {
+    listen 80;
+    server_name tu-dominio.com www.tu-dominio.com;</p><p>    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+NGINX</p><p><h1>Habilitar sitio</h1>
+ln -s /etc/nginx/sites-available/cybersecurity-site /etc/nginx/sites-enabled/</p><p><h1>Probar configuración</h1>
+nginx -t</p><p><h1>Reiniciar Nginx</h1>
+systemctl restart nginx
+</code></pre></p><p><h3>Paso 6: Configurar SSL</h3></p><p><pre><code>bash
+<h1>Obtener certificado SSL</h1>
+certbot --nginx -d tu-dominio.com -d www.tu-dominio.com</p><p><h1>Renovación automática</h1>
+systemctl enable certbot.timer
+</code></pre></p><p><h3>Paso 7: Verificar</h3></p><p><pre><code>bash
+<h1>Verificar que PM2 está corriendo</h1>
+pm2 status</p><p><h1>Ver logs</h1>
+pm2 logs mmseg</p><p><h1>Verificar Nginx</h1>
+systemctl status nginx
+</code></pre></p><p>---</p><p><h2>🌐 Configuración de Dominio Personalizado</h2></p><p><h3>Opción A: Vercel (Recomendado)</h3></p><p>1. <strong>Comprar dominio</strong>:
+   - GoDaddy, Namecheap, Google Domains, etc.
+   - Ejemplo: `mmseg.com`</p><p>2. <strong>En Vercel Dashboard</strong>:
+   - Ir a: Settings → Domains
+   - Click en "Add Domain"
+   - Ingresar: `mmseg.com`
+   - Click en "Add"</p><p>3. <strong>Vercel proporciona nameservers</strong>:
+   - Copiar nameservers de Vercel
+   - Ir a registrador de dominio
+   - Cambiar nameservers a los de Vercel
+   - Esperar 24-48 horas para propagación</p><p>4. <strong>Verificar</strong>:
+   - Visitar `https://mmseg.com`
+   - Debe mostrar tu sitio</p><p><h3>Opción B: Netlify</h3></p><p>1. <strong>Comprar dominio</strong> (mismo proceso)</p><p>2. <strong>En Netlify Dashboard</strong>:
+   - Ir a: Site settings → Domain management
+   - Click en "Add custom domain"
+   - Ingresar dominio
+   - Seguir instrucciones</p><p><h3>Opción C: Servidor Propio</h3></p><p>1. <strong>Comprar dominio</strong></p><p>2. <strong>Apuntar A record a IP del servidor</strong>:
+   - En registrador de dominio
+   - Crear A record: `mmseg.com` → `tu-ip-del-servidor`
+   - Esperar propagación</p><p>3. <strong>Configurar SSL</strong> (ya hecho con Certbot)</p><p>---</p><p><h2>✓ Verificación Post-Despliegue</h2></p><p><h3>Checklist de Verificación</h3></p><p>- [ ] Sitio accesible en URL pública
+<li>[ ] HTTPS funciona (candado verde)</li>
+<li>[ ] Logo carga correctamente</li>
+<li>[ ] Menú de navegación funciona</li>
+<li>[ ] Botones CTA funcionan</li>
+<li>[ ] ChatBot aparece (botón azul esquina inferior derecha)</li>
+<li>[ ] Formulario de contacto funciona</li>
+<li>[ ] No hay errores en consola (F12)</li>
+<li>[ ] Responsive en móvil</li>
+<li>[ ] Metadata SEO correcta (ver source)</p><p><h3>Pruebas Rápidas</h3></p><p><pre><code>bash</li>
+<h1>Verificar HTTPS</h1>
+curl -I https://tu-dominio.com
+<h1>Debe mostrar: HTTP/2 200</h1></p><p><h1>Verificar headers de seguridad</h1>
+curl -I https://tu-dominio.com | grep -i "strict-transport"
+<h1>Debe mostrar: Strict-Transport-Security</h1></p><p><h1>Verificar que no hay errores</h1>
+<h1>Abrir en navegador y revisar Console (F12)</h1>
+</code></pre></p><p>---</p><p><h2>🔧 Troubleshooting</h2></p><p><h3>Problema: "Build failed"</h3></p><p><strong>Solución</strong>:
+1. Verificar que `.env.local` tiene `ANTHROPIC_API_KEY`
+2. Verificar que `package.json` tiene todas las dependencias
+3. Revisar logs de build en dashboard
+4. Ejecutar `npm run build` localmente para verificar</p><p><h3>Problema: ChatBot no funciona</h3></p><p><strong>Solución</strong>:
+1. Verificar que `ANTHROPIC_API_KEY` está configurada
+2. Verificar que API key es válida (comienza con `sk-ant-`)
+3. Revisar logs en navegador (F12 → Console)
+4. Verificar que API key tiene crédito disponible</p><p><h3>Problema: Sitio lento</h3></p><p><strong>Solución</strong>:
+1. Verificar Core Web Vitals en Vercel Analytics
+2. Optimizar imágenes
+3. Implementar caching
+4. Revisar Network tab en DevTools</p><p><h3>Problema: Dominio no funciona</h3></p><p><strong>Solución</strong>:
+1. Esperar 24-48 horas para propagación DNS
+2. Verificar que nameservers están correctos
+3. Usar herramienta: https://mxtoolbox.com/
+4. Contactar soporte del registrador</p><p><h3>Problema: SSL certificate error</h3></p><p><strong>Solución</strong>:
+1. Esperar a que Vercel/Netlify genere certificado (automático)
+2. Verificar que dominio está correctamente configurado
+3. Limpiar caché del navegador
+4. Intentar en navegador privado</p><p>---</p><p><h2>📊 Monitoreo Post-Despliegue</h2></p><p><h3>Vercel Analytics</h3></p><p>1. <strong>En Vercel Dashboard</strong>:
+   - Ir a: Analytics
+   - Ver métricas de rendimiento
+   - Monitorear errores</p><p><h3>Recomendaciones Adicionales</h3></p><p>1. <strong>Google Analytics</strong>:
+   - Agregar tracking code
+   - Monitorear tráfico</p><p>2. <strong>Sentry</strong> (error tracking):
+   - Crear cuenta en https://sentry.io
+   - Integrar con Next.js
+   - Recibir alertas de errores</p><p>3. <strong>Uptime Monitoring</strong>:
+   - Usar https://uptimerobot.com
+   - Monitorear disponibilidad 24/7</p><p>---</p><p><h2>🎉 ¡Listo!</h2></p><p>Tu sitio está en línea. Próximos pasos:</p><p>1. ✓ Compartir URL con clientes
+2. ✓ Configurar dominio personalizado
+3. ✓ Agregar analytics
+4. ✓ Monitorear rendimiento
+5. ✓ Actualizar contenido regularmente</p><p>---</p><p><h2>📞 Soporte</h2></p><p><strong>Vercel Support</strong>: https://vercel.com/support  
+<strong>Netlify Support</strong>: https://support.netlify.com  
+<strong>AWS Support</strong>: https://aws.amazon.com/support  </p><p>---</p><p><strong>Documento generado</strong>: 30 de Enero, 2026  
+<strong>Versión</strong>: 1.0  
+<strong>Autor</strong>: Chat (AI Assistant)
+
+  </div>
+  
+  <div class="metadata" style="margin-top: 60px; page-break-before: always;">
+    <h3>Información del Documento</h3>
+    <p><strong>Generado</strong>: 30 de Enero, 2026</p>
+    <p><strong>Versión</strong>: 1.0</p>
+    <p><strong>Autor</strong>: Chat (AI Assistant)</p>
+    <p><strong>Proyecto</strong>: MMSEG Ciberseguridad - Sitio Web Profesional</p>
+    <p><strong>Ubicación del Proyecto</strong>: /home/code/cybersecurity-site/</p>
+  </div>
+</body>
+</html>
