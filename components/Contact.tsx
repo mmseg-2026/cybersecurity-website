@@ -57,7 +57,7 @@ export function Contact() {
       label: 'Ubicación',
       value: 'Santiago, Chile',
       href: '#'
-    }
+    },
         {
       icon: Phone,
       label: 'Teléfono Argentina',
