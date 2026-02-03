@@ -58,6 +58,18 @@ export function Contact() {
       value: 'Santiago, Chile',
       href: '#'
     }
+        {
+      icon: Phone,
+      label: 'Teléfono Argentina',
+      value: '+54 261 123 4567',
+      href: 'tel:+542611234567'
+    },
+        {
+      icon: MapPin,
+      label: 'Ubicación Argentina',
+      value: 'Mendoza, Argentina',
+      href: '#'
+    },
   ]
 
   return (
