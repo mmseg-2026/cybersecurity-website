@@ -56,7 +56,6 @@ export function Contact() {
       icon: MapPin,
       label: 'Ubicación',
       value: 'Santiago, Chile',
-      href: '#'
     },
         {
       icon: Phone,
@@ -68,7 +67,6 @@ export function Contact() {
       icon: MapPin,
       label: 'Ubicación Argentina',
       value: 'Mendoza, Argentina',
-      href: '#'
     },
   ]
 
