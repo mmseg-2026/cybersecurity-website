@@ -378,7 +378,8 @@ npm update
 
 **Email**: contacto@mmseg.com  
 **Teléfono**: +56 2 2345 6789  
-**Ubicación**: Santiago, Chile  
+**Ubicación**: Santiago, Chile 
+               Argentina, Mendoza
 
 **Soporte Técnico**:
 - Vercel: https://vercel.com/support
