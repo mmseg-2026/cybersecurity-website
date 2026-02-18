@@ -37,12 +37,12 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline (texto nuevo, mismos colores que antes) */}
             <p className="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
-              Protege tu negocio con soluciones integrales de ciberseguridad e infraestructura. 
-              Expertos certificados listos para defender tu empresa 24/7.
+              En <span className="font-semibold text-slate-100">MMSEG</span> contamos con un equipo profesional de Chile y Argentina
+              dedicado a diseñar, proteger y operar infraestructuras seguras. Trabajamos en hardening de servidores,
+              monitoreo, respuesta a incidentes y auditorías técnicas, con foco en la estabilidad y la seguridad de tus sistemas.
             </p>
-
 
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 border-t border-slate-800">
