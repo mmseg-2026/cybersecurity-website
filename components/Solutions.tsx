@@ -4,13 +4,7 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Building2, Briefcase, ShoppingCart } from 'lucide-react'
 
-/**
- * Solutions Section Component
- * Displays tailored solutions for different business types
- * Includes enterprise, SMB, and e-commerce focused offerings
- */
 export function Solutions() {
-  // Solutions tailored for different business segments
   const solutions = [
     {
       icon: Building2,
@@ -20,9 +14,9 @@ export function Solutions() {
         'Arquitectura multi-capa',
         'Cumplimiento ISO 27001',
         'Soporte dedicado 24/7',
-        'SLA garantizado 99.99%'
+        'SLA garantizado 99.99%',
       ],
-      color: 'from-blue-600 to-blue-400'
+      color: 'from-blue-600 to-blue-400',
     },
     {
       icon: Briefcase,
@@ -32,9 +26,9 @@ export function Solutions() {
         'Implementación rápida',
         'Costos predecibles',
         'Escalabilidad flexible',
-        'Soporte técnico incluido'
+        'Soporte técnico incluido',
       ],
-      color: 'from-cyan-600 to-cyan-400'
+      color: 'from-cyan-600 to-cyan-400',
     },
     {
       icon: ShoppingCart,
@@ -44,16 +38,15 @@ export function Solutions() {
         'PCI DSS Compliance',
         'Protección de pagos',
         'Prevención de fraude',
-        'Certificado SSL/TLS'
+        'Certificado SSL/TLS',
       ],
-      color: 'from-purple-600 to-purple-400'
-    }
+      color: 'from-blue-400 via-cyan-300 to-blue-300',
+    },
   ]
 
   return (
     <section id="solutions" className="relative py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -65,7 +58,6 @@ export function Solutions() {
           </p>
         </div>
 
-        {/* Solutions Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => {
             const Icon = solution.icon
@@ -74,37 +66,34 @@ export function Solutions() {
                 key={index}
                 className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group"
               >
-                {/* Top Accent Bar */}
                 <div className={`h-1 bg-gradient-to-r ${solution.color}`} />
 
-                {/* Card Content */}
                 <div className="p-8 space-y-6">
-                  {/* Icon */}
-                  <div className={`w-14 h-14 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`w-14 h-14 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}
+                  >
                     <Icon className="w-7 h-7 text-white" />
                   </div>
 
-                  {/* Title */}
                   <h3 className="text-2xl font-bold text-slate-100">
                     {solution.title}
                   </h3>
 
-                  {/* Description */}
                   <p className="text-slate-400 leading-relaxed">
                     {solution.description}
                   </p>
 
-                  {/* Benefits List */}
                   <ul className="space-y-3">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className={`w-1.5 h-1.5 rounded-full mt-2 bg-gradient-to-r ${solution.color}`} />
+                        <div
+                          className={`w-1.5 h-1.5 rounded-full mt-2 bg-gradient-to-r ${solution.color}`}
+                        />
                         <span className="text-slate-300 text-sm">{benefit}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* CTA Button */}
                   <Button
                     className={`w-full bg-gradient-to-r ${solution.color} hover:opacity-90 text-white border-0 group/btn`}
                   >
